@@ -25,7 +25,7 @@ function Signup() {
     network
       .register(details)
       .then(() => {
-        navigate("/login");
+        navigate("/signup");
       })
       .catch((error) => {
         toast.error(JSON.stringify(error.response.data));
