@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import network from "../../utils/network";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -11,7 +11,7 @@ function Signup() {
   const [username, setUsername] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleSubmit = () => {
     const details = {
@@ -24,9 +24,9 @@ function Signup() {
 
     network
       .register(details)
-      .then(() => {
-        navigate("/signup");
-      })
+      // .then(() => {
+      //   navigate("/signup");
+      // })
       .catch((error) => {
         toast.error(JSON.stringify(error.response.data));
       })
